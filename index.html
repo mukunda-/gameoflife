@@ -1,15 +1,44 @@
+<!DOCTYPE html>
 <html>
     <title>Game of Life</title>
+    <meta charset="utf-8">
     <style>
         body {
             margin: 0;
             width:  100%;
             height: 100%;
         }
+
+        #board {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        #controls {
+            position: absolute;
+            
+            margin-left: -138px;
+            left: 50%;
+            top: 16px;
+        }
+
+        #controls button {
+            width: 90px;
+            height: 35px;
+        }
     </style>
     <script src="script.js"></script>
 
     <body>
         <div id="board"></div>
+        <div id="controls">
+            <button id="pauseButton" onclick="onPause()">⏸ Pause</button>
+            <button id="eraseButton" onclick="onErase()">🧼 Erase</button>
+            <button id="randomButton" onclick="onRandom()">🙃 Rando</button>
+        </div>
+        
     </body>
 </html>
